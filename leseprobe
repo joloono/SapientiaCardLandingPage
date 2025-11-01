@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kurse buchen – Sapientia Society</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DG4G95JXLK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-DG4G95JXLK');
+    </script>
+    
     <style>
         :root {
             --gold: #D4AF37;
@@ -132,5 +142,19 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Google Analytics Event Tracking für Button Clicks
+        document.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                const buttonName = link.textContent.trim().replace(/\s+/g, '_').toLowerCase();
+                gtag('event', 'click', {
+                    'event_category': 'Button',
+                    'event_label': buttonName,
+                    'value': 1
+                });
+            });
+        });
+    </script>
 </body>
 </html>
