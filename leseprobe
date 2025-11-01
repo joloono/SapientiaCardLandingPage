@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurse buchen – Sapientia Society</title>
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --gold-dark: #B8860B;
+            --bg: #f8f9fa;
+            --white: #fff;
+            --shadow: 0 12px 40px rgba(0,0,0,0.1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: system-ui, sans-serif; 
+            background: url('bild2.jpg') no-repeat center center fixed; 
+            background-size: cover;
+            padding: 2rem 1rem; 
+            min-height: 100vh;
+        }
+        .container { max-width: 600px; margin: 0 auto; text-align: center; }
+        .leseprobe { 
+            background: rgba(0, 0, 0, 0.65); 
+            padding: 3rem 2rem; 
+            border-radius: 24px; 
+            box-shadow: var(--shadow); 
+            margin-bottom: 3rem; 
+        }
+        .leseprobe h1 { 
+            font-size: clamp(2.5rem, 8vw, 4rem); 
+            color: var(--gold); 
+            margin-bottom: 1.5rem; 
+        }
+        .download-btn { 
+            display: inline-block; 
+            background: rgba(212, 175, 55, 0.95); 
+            color: #fff; 
+            padding: 1.5rem 3rem; 
+            font-size: 1.4rem; 
+            font-weight: 700; 
+            text-decoration: none; 
+            border-radius: 16px; 
+            box-shadow: var(--shadow); 
+            transition: all 0.3s ease; 
+        }
+        .download-btn:hover { 
+            transform: scale(1.05); 
+            box-shadow: 0 20px 50px rgba(212,175,55,0.6); 
+            background: rgba(212, 175, 55, 1); 
+        }
+        .download-btn.secondary { 
+            background: transparent; 
+            border: 2px solid var(--gold); 
+            margin-top: 1rem; 
+        }
+        .download-btn.secondary:hover { 
+            background: rgba(212, 175, 55, 0.2); 
+        }
+        h2 { 
+            font-size: clamp(1.8rem, 5vw, 2.5rem); 
+            color: var(--gold); 
+            margin-bottom: 2rem; 
+        }
+        .karte { 
+            background: rgba(0, 0, 0, 0.7); 
+            padding: 3rem 2rem; 
+            border-radius: 24px; 
+            box-shadow: var(--shadow); 
+        }
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 1rem; 
+        }
+        .kurs-btn { 
+            background: rgba(184, 134, 11, 0.9); 
+            color: #fff; 
+            padding: 1.5rem 1rem; 
+            font-size: 1.1rem; 
+            font-weight: 600; 
+            text-decoration: none; 
+            border-radius: 16px; 
+            transition: all 0.3s ease; 
+            text-align: center; 
+            line-height: 1.3; 
+            min-height: 80px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        }
+        .kurs-btn:hover { 
+            background: var(--gold); 
+            transform: translateY(-4px); 
+            box-shadow: 0 16px 40px rgba(212,175,55,0.7); 
+        }
+        @media (max-width: 600px) { 
+            body { padding: 1rem; } 
+            .leseprobe, .karte { padding: 2rem 1.5rem; } 
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Leseprobe OBEN -->
+        <div class="leseprobe">
+            <h1>📖 Leseprobe</h1>
+            <a href="https://drive.usercontent.google.com/u/0/uc?id=1jQxnA8Ttmx3-ZuQABKkiEeUA8uoYLudk&export=download"
+               class="download-btn" 
+               download="Leseprobe.pdf">
+                Jetzt herunterladen
+            </a>
+            <a href="https://amzn.eu/d/hKtVJoI" 
+               class="download-btn secondary" 
+               target="_blank"
+               rel="noopener noreferrer">
+                oder Buch kaufen
+            </a>
+        </div>
+
+        <!-- BUCHEN UNTEN -->
+        <div class="karte">
+            <h2>Kursangebot in Luzern:
+            👋 Schreiben Sie mir bei Interesse</h2>
+            <div class="grid">
+                <a href="mailto:johannes@sapientia-society.com?subject=Autoren-Pakete - Zusammen zur Autobiografie" class="kurs-btn">Autor werden - <br>Begleitungs-Pakete</a>
+                <a href="mailto:johannes@sapientia-society.com?subject=Autonomie im Alter - Smartphone Basics Kurs" class="kurs-btn">Smartphone Basics Kurs</a>
+                <a href="mailto:johannes@sapientia-society.com?subject=Autonomie im Alter - Autonomie mit KI (Aufbau Kurs)" class="kurs-btn">Mehr Autonomie mit KI</a>
+                <a href="mailto:johannes@sapientia-society.com?subject=Autonomie im Alter - Autobiografie Schreiben mit System" class="kurs-btn">Autobiografie schreiben lernen</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
